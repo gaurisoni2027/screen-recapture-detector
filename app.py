@@ -66,7 +66,7 @@ image_source = uploaded_file if uploaded_file else camera_file
 
 if image_source is not None:
 
-    image = Image.open(image_source)
+    image = Image.open(image_source).convert("RGB")
 
     st.image(
     image,
